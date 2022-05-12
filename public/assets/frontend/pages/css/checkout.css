@@ -1,0 +1,51 @@
+
+/* ==================== Checkout Area  ========================= */
+
+.checkout-area {
+    width: 100%;
+    height: auto;
+}
+
+.checkout-wrapper {
+    width: 80%;
+    margin: 0 auto;
+}
+
+label {
+    display: inline-block;
+    margin-bottom: .5rem;
+    font-size: 14px;
+}
+
+button, input, optgroup, select, textarea, option {
+    margin: 0px;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    font-size: 14px;
+}
+
+textarea::placeholder,
+input::placeholder {
+    font-size: 12px;
+}
+
+.input-group button {
+    width: 25%;
+    height: 29px;
+    border: none;
+    outline: none;
+}
+
+.form-control {
+    width: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+
+    .checkout-wrapper {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+}

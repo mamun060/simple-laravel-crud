@@ -1,0 +1,41 @@
+/********************* About Area *********************/
+.about {
+    width: 100%;
+    height: max-content;
+
+}
+
+.about .content h2 {
+    font-size: 2rem;
+}
+
+.about .image img {
+    width: 100%;
+    height: max-content;
+    margin: 0;
+}
+
+
+
+
+@media only screen and (max-width:520px) {}
+
+@media only screen and (min-width: 279px) and (max-width: 768px) {
+    .heading-title h2 {
+        font-size: 1.5em;
+        line-height: 0px;
+        margin: 0px 0px 0px;
+    }
+
+    .about .content h2 {
+        font-size: 1.2rem;
+    }
+
+    .right {
+        order: 1;
+    }
+
+    .left {
+        order: 2;
+    }
+}

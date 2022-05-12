@@ -1,0 +1,333 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+}
+
+.mt-10{
+    margin-top: 10px !important;
+}
+.mb-10{
+    margin-bottom: 10px !important;
+}
+
+/* ==================== User Dashboard Area  ========================= */
+
+.user-dashboard-area{
+    width: 100%;
+    height: auto;
+}
+
+/* ==================== Sidebar Area ========================= */
+
+.user-dashboard-area .sidebar{
+    width: 100%;
+    height: auto;
+} 
+.user-dashboard-area .sidebar .sidebar__info {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    /* background: #FFFFFF; */
+    box-shadow: 0px 4px 6px -3px #9c9c9c;
+    border-radius: 3px;
+    background-color: #faf8f8 !important;
+}
+.sidebar .sidebar__info > p {
+    font-size: 0.9rem;
+    font-family: var(--google-secondary-font-family);
+    text-align: center;
+    border-radius: 10px 10px 0px 0px;
+    background-color: rgb(226, 12, 24);
+    color: rgb(255, 255, 255);
+    border-bottom: 5px solid rgb(255, 255, 255);
+    margin-bottom: 0px !important;
+}
+.sidebar .sidebar__info .sidebar__info--thumbnail {
+    display:flex;
+    align-items: center;
+}
+.sidebar .sidebar__info .sidebar__info--thumbnail img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    aspect-ratio: 1/1;  
+}
+.sidebar .sidebar__info .sidebar__info--content h3 {
+    font-size: 14px;
+    font-family: var(--google-secondary-font-family);
+}
+.sidebar .user-dashboard-menu{
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    /* background: #F3F3F3; */
+    box-shadow: 0px 4px 6px -3px #9c9c9c;
+    border-radius: 3px;
+    background-color: rgb(250, 248, 248) !important;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+.sidebar .user-dashboard-menu p{
+    text-align: center;
+    border-radius: 10px 10px 0px 0px;
+    background-color:#e20c18;
+    color:#fff;
+    border-bottom: 5px solid #fff;
+    margin-bottom: 0px !important;
+}
+.sidebar .user-dashboard-menu .nav-pills .nav-link {
+    background: #F3F3F3;
+    margin-right: 1px;
+    color: black !important;
+    text-align: left !important;
+    border-radius: 0px 10px 0px;
+    border: 1px solid #f0eeee;
+    font-family: var(--google-secondary-font-family);
+    font-size: 14px;
+}
+.sidebar .user-dashboard-menu .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    background-color:#e20c18;
+    color: white !important;
+}
+
+/* ==================== End Sidebar Area ========================= */
+
+
+/* ==================== Start MainBar Area ========================= */
+
+.mainbar .user-profile-details{
+    padding: 20px !important;
+    background-color: #fafafa !important;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px rgb(0 0 0 / 25%) !important;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    margin-top: 50px;
+}
+
+.user-profile-details .user-profile-info ul li {
+    list-style: none;
+    background-color: #FFF;
+    margin: 5px 5px 5px 0px;
+    padding: 5px 10px 5px 10px;
+    margin-left: -35px;
+    color: #000;
+    border-radius: 20px 20px 0px;
+    font-size: 14px;
+    font-family: var(--google-secondary-font-family) ;
+}
+.user-profile-picture {
+    margin-top: -10px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 1px 1px 1px rgb(0 0 0 / 25%) !important;
+    padding: 10px;
+    text-align: center;
+}
+.user-profile-picture img{
+    width: 100%;
+    /* height: 300px; */
+    aspect-ratio: 1/1.1;
+}
+
+.dataTables_wrapper .row:first-child > div:last-child{
+    padding-right: 0px !important;
+}
+
+.dataTables_filter,
+.dataTables_paginate {
+    float: right;
+    margin-right: 13px !important;
+}
+/* .data-table{
+    overflow-x: auto;
+} */
+.data-table label{
+        display: inline-flex;
+        margin: 0px 0px 10px  0px;
+        
+}
+.data-table tbody, td, tfoot, th, thead, tr {
+    border-color: inherit;
+    border-style: solid;
+    border-width: 0;
+    font-size: 14px;
+    font-family: var(--google-secondary-font-family) !important;
+}
+
+.data-table .page-item.active .page-link {
+    z-index: 3;
+    color: #fff;
+    background-color:#e20c18;
+    border-color: #e20c18;
+}
+.user-dashboard-area .user-profile-details .account-info {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    background-color: #F3F3F3 !important;
+    padding: 28px 30px 30px;
+}
+.profile-img{
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    /* border: 1px solid rgba(0, 0, 0, 0.2); */
+    /* padding: 5px; */
+    /* background-color: #fff; */
+    position: relative;
+    overflow: hidden;
+}
+
+.profile-img .overlay{
+    position: absolute;
+    width: 100%;
+    height: calc( 1vw + 4em);
+    background-color: rgba(83, 83, 83, 0.466);
+    content: '';
+    bottom: 0;
+    border-radius: 0px 0px 50% 50%;
+    display: none !important;
+    transition: all 300ms ease;
+}
+
+.profile-img:hover .overlay{
+    display: flex !important;
+}
+.profile-img img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 1px solid rgba(165, 42, 42, 0.2);
+}
+
+input.file-loder {
+    height: 25px;
+    width: 225px;
+    margin-left: 10px;
+    line-height: 13px;
+    color: #ffff !important;
+}
+
+.account-info .form-select {
+    width: 90%;
+    height: 28px;
+  
+}
+.account-info h2{
+    font-family: var(--google-secondary-font-family);
+    font-size: 1.5rem;
+  
+}
+.account-info textarea.form-control {
+    width: 95%;
+    height: 100px;
+    box-shadow: none;
+}
+.account-info button:focus{
+    outline: 0 !important;
+}
+
+input,::placeholder , .form-select ,textarea::placeholder{
+    font-size: 12px !important;
+    color: #4e4a4a !important;
+}
+.order-product{
+    width: max-content !important;
+}
+
+.order-product .inner-wrap{
+    display: flex;
+    /* flex-wrap: wrap !important; */
+}
+
+.order-product img{
+    width: 50px;
+    height: 50px;
+    display: inline-block !important;
+}
+.order-product p{
+    margin-bottom: 0px;
+    padding: 5px 5px 5px 0px;
+}
+
+
+.user-profile-details .account-info .box{
+    width: 100%;
+    height: 100px;
+    padding: 15px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.user-profile-details .account-info .box .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #143250;
+    border-bottom: 1px solid;
+    width: 70%;
+    text-align: left;
+    padding-bottom: 10px;
+}
+
+
+/* ==================== End MainBar Area ========================= */
+
+
+@media only screen and (max-width: 768px) {
+    
+    .user-dashboard-area .user-profile-details .account-info {
+        border: none;
+        padding: 0px !important
+    }
+    .mainbar .user-profile-details{
+        padding: 10px !important;
+        margin: 0 auto;
+    }
+    .purchaseditems-product .inner-wrap{
+        display: inline-block;
+    }
+    .data-table{
+        overflow-x: auto;
+    }
+    .data-table label {
+        display: inline-flex;
+        margin: 0px 15px 20px 0px;
+    }
+    .account-info h2 {
+        font-family: var(--google-secondary-font-family);
+        font-size: 1.5rem;
+        padding: 20px 0px 10px 0px;
+        text-align: center;
+    }
+    .data-table, #user-product-oderlist_length {
+        text-align: center;
+    }
+    .data-table, #user-product-oderlist_info {
+        text-align: center;
+        margin: 10px 0px;
+    }
+    /* .data-table, .dataTables_filter, .dataTables_paginate {
+        float: none;
+        display: flex !important;
+        justify-content: center !important;
+    } */
+    .data-table, #user-purchaseditems_length {
+        text-align: center;
+    }
+    .data-table, #user-purchaseditems_info {
+        text-align: center;
+    }
+
+    .profile-img {
+        margin: 0 auto;
+    }
+    .form-control {
+        margin: 0 auto;
+    }
+    .account-info textarea.form-control {
+        width: 90%;
+    }
+    .updatebtn{
+        margin-left: 10px;
+    }
+
+
+}

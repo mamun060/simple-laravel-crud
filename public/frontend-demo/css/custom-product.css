@@ -1,0 +1,14 @@
+.grid-box-container{
+    width: 100%;
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.grid-box-container .box{
+    /* background-color: rgb(110, 110, 110); */
+}
+
+/* .grid-box-container .box .description{
+    text-align:inherit;
+} */

@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--default-font-family);
+    font-family:var(--google-primary-font-family);
+    font-family: var(--google-secondary-font-family);
+}
+
+body{
+    background-color: var(--theme-bg-primary-color);
+    font-size: var(--default-font-size);
+}
+.payment-area{
+    width: 1021.5px;
+    height: 792.84px;
+    background: #FFFFFF;
+    border-radius: 10px;
+}
+
+.payment-back-page-area
+.back-arrow svg{
+    width: 25px;
+    height: 25px;
+    color: #5F5C5E !important;
+    opacity: 0.5;
+}
+.payment-back-page-area
+.xmark-arrow svg{
+    position: absolute;
+    width: 22.22px;
+    height: 22.22px;
+    color: #5F5C5E !important;
+}
+.make-payment-area h2{
+    font-family: var(--google-primary-font-family);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 38px;
+    display: flex;
+    align-items: flex-end;
+    text-transform: capitalize;
+    color: #DC0029;
+}
+.payment-step .step{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #DFDEDE;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 30px;
+
+}
+.payment-step .step:hover{
+    background-color: #DC0029;
+    color: #FFFFFF;
+}
+
+
+
+
+
+
+
+
+@media only screen and (min-width: 279px) and (max-width: 320px) {
+  
+}
+
+@media only screen and (min-width:321px) and (max-width: 768px) {
+  
+}
+
+@media only screen and (min-width:520px) and (max-width: 768px) {
+
+}
+
+
+@media only screen and (min-width: 769px) and (max-width: 991px){
+ 
+}

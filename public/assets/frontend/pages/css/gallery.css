@@ -1,0 +1,45 @@
+/********************* About Area *********************/
+.parent-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center !important;
+    gap: 1em;
+}
+
+
+a.lightbox-cats img {
+    height: 180px;
+    margin: 2px 0px;
+}
+
+@media only screen and (min-width: 279px) and (max-width: 768px) {
+    .heading-title h2 {
+        font-size: 1.5em;
+        line-height: 0px;
+        margin: 0px 0px 0px;
+    }
+
+    .about .content h2 {
+        font-size: 1.2rem;
+    }
+
+    .parent-container {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .parent-container img {
+        width: 100%;
+
+    }
+
+    a.lightbox-cats img {
+        height: auto;
+        aspect-ratio: 1/1.1;
+    }
+
+
+}

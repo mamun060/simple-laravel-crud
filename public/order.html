@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order</title>
+    <style>
+
+        .order-header .logo img{
+            margin: 0 auto;
+            display: block;
+        }
+
+        .order-body{
+            width: 50%;
+            margin: 0 auto;
+        }
+
+        .header-content{
+            text-align: center;
+        }
+
+        .order-no{
+            color: #000 !important;
+            font-weight: bold;
+        }
+
+        .btn{
+            border: none;
+            outline: none;
+            padding: 5px 10px;
+            font-weight: 600;
+        }
+
+        .btn-danger{
+            color: #fff;
+            background-color: red;
+        }
+
+        .table{
+            width: 100%;
+            position: relative;
+            text-align: left;
+            border-collapse: collapse;
+        }
+
+        .table.fixed{
+
+            table-layout: fixed;
+        }
+
+        .table thead tr{
+            background-color: #fdfd;
+            color: #000;
+        }
+
+        .table-borderless{
+            border: none;
+        }
+
+        .mb-10{
+            margin-bottom: 10px;
+        }
+        .mb-20{
+            margin-bottom: 20px;
+        }
+        .mb-30{
+            margin-bottom: 30px;
+        }
+        .mb-40{
+            margin-bottom: 40px;
+        }
+
+        .table tbody th,
+        .table tbody td{
+            padding: 0px 10px;
+        }
+
+         .inner-product img{
+            float: left;
+            max-width: 100px;
+            margin-right: 10px;
+         }
+
+         .call-us{
+             color: #fff;
+             background-color: red;
+             width: 100%;
+             position: relative;
+             text-align: center;
+             padding: 1px 0px;
+         }
+         
+         .table a{
+             text-decoration: none !important;
+             color: #fff;
+         }
+    </style>
+</head>
+<body>
+    <div class="order-body">
+        <table class="table order-header mb-30">
+            <tbody>
+                <tr>
+                    <th>
+                        <div class="logo">
+                            <img src="./assets/frontend/img/logogroup.jpg" alt="">
+                        </div>
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        <div class="header-content">
+                            <h2>Thanks For Your Order!</h2>
+                            <p style="padding: 0; line-height: 0.5em; font-weight: normal;">Hi Jahin, We have received order #<a
+                                    href="/" class="order-no">03232323</a> and We're working on it now.</p>
+                            <p style="padding: 0; line-height: 0.5em; font-weight: normal;">We'll Email you an update when we
+                                have
+                                confirmed/shipped it.</p>
+        
+                            <button class="btn btn-danger"><a href="/">Visit Our site & Track Your order</a></button>
+                        </div>
+                    </th>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="order-body">
+        <table class="table fixed table-borderless mb-20">
+            <thead>
+                <tr>
+                    <th style="padding: 5px 10px;">ORDER & SHIPPING INFO</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>Order Details</th>
+                    <th>Shipping Address</th>
+                </tr>
+                <tr>
+                    <td>Order No: #45345345345</td>
+                    <td rowspan="3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, reprehenderit? Doloribus rem exercitationem autem laudantium assumenda officia quaerat sunt odio. </td>
+                </tr>
+                <tr>
+                    <td>Order Date: March 30, 2022</td>
+                </tr>
+                <tr>
+                    <td>Order Total: $100</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table class="table table-borderless">
+            <thead>
+                <tr>
+                    <th style="padding: 5px 10px;">ITEMS</th>
+                    <th style="width: 100px;text-align: center;">Qty</th>
+                    <th style="width: 130px;text-align: right;">Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <div class="inner-product">
+                            <img src="./assets/frontend/img/logogroup.jpg" alt="">
+                            <p>Lorem ipsum dolor sit amet.</p>
+                        </div>
+                    </td>
+                    <td style="text-align: center;">10</td>
+                    <td style="text-align: right; padding-right: 5px;">100</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th colspan="2" style="text-align: right;">Subtotal (1 item):</th>
+                    <td style="text-align: right;padding-right: 5px;">100</td>
+                </tr>
+                <tr>
+                    <th colspan="2" style="text-align: right;">Shipping:</th>
+                    <td style="text-align: right;padding-right: 5px;">0</td>
+                </tr>
+                <tr>
+                    <th colspan="2" style="text-align: right;">Tax:</th>
+                    <td style="text-align: right;padding-right: 5px;">0</td>
+                </tr>
+                <tr>
+                    <th colspan="2" style="text-align: right;">Total:</th>
+                    <td style="text-align: right;padding-right: 5px;">100</td>
+                </tr>
+            </tfoot>
+        </table>
+        <table class="table mb-10">
+            <tr>
+                <th class="call-us">
+                    <h3>Call us At <span><a href="tel:02932421">02932421</a></span> or Reply to this Email.</h3>
+                </th>
+            </tr>
+        </table>
+
+        Best Regards,<br>
+        {{ config('app.name') }}.
+    </div>
+</body>
+</html>

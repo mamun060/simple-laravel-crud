@@ -1,0 +1,40 @@
+.card-header h6 a{
+    text-decoration: none;
+    color: #000;
+    font-size: 1.5rem;
+}
+
+table thead tr th{
+    font-size: 1rem;
+    color: #000;
+}
+
+table tbody {
+    color: #000;
+    font-size: 0.95rem;
+}
+
+.modal-heading {
+    font-size: 18px;
+    color: #000;
+}
+
+.bg-custom-booking {
+    font-size: 16px;
+    color: #000;
+}
+
+.form-group label {
+    font-size: 15px !important;
+    color: #000 !important;
+}
+
+.form-control {
+    font-size: 14px !important;
+    color: #000 !important;
+}
+
+.form-group input::placeholder {
+    font-size: 14px !important;
+    color: rgb(110, 110, 110) !important;
+}

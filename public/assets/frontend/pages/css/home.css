@@ -1,0 +1,323 @@
+/* Hero Area */
+.hero-area {
+    width: 100%;
+    height: auto;
+    margin: 30px 0px 100px 0px;
+    position: relative;
+    /* background-color: #DADADA; */
+}
+
+.background-1 {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.hero-content {
+    width: 625px;
+    height: auto;
+}
+
+.hero-heading h2 {
+    font-family: var(--google-secondary-font-family);
+    font-weight: bold;
+    font-size: 2.2em;
+    line-height: 57px;
+    text-align: center;
+    color: #DC0029;
+}
+
+.hero-text p {
+    font-family: var(--google-secondary-font-family);
+    font-weight: 600;
+    width: 100%;
+    font-size: 15px;
+    line-height: 163.15%;
+    text-align: center;
+    color: #999AA5;
+}
+
+/* Product Area */
+.product-area {
+    width: 100%;
+    height: auto;
+    margin: 30px 0px;
+}
+
+.product-content {
+    background: rgba(255, 247, 251, 0.7);
+    box-shadow: 2px 2px 1px rgba(220, 0, 41, 0.3);
+    border-radius: 10px;
+    margin-bottom: 50px;
+    padding: 10px 5px;
+}
+
+.product-content:hover {
+    box-shadow: 2px 2px 7px rgb(220 0 41 / 30%);
+}
+
+/* .product-img img {
+    margin-top: -62px;
+    width: 150px;
+    height: 192px;
+} */
+
+.product-img img {
+    /* margin-top: -62px !important; */
+    width: 150px;
+    height: max-content;
+    /* aspect-ratio: 1/1.3; */
+}
+
+.product-details h3 {
+    font-family: Hind Siliguri;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.5em;
+    line-height: 1.5em;
+    letter-spacing: -0.02em;
+    color: rgba(0, 0, 0, 0.8);
+    margin-left: 20px;
+}
+
+.product-details p {
+    font-family: Hind Siliguri;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    text-align: center;
+    line-height: 1.5em;
+    color: #878586;
+}
+
+.product-details {
+    padding: 10px 0px;
+}
+
+a.product-button {
+    background: #DC0029;
+    border-radius: 5px;
+    color: #FFFFFF;
+    padding: 5px 10px;
+    border: none;
+    text-decoration: none;
+}
+
+a.product-button:hover {
+    background: #43495d;
+}
+
+.product-ses-more a {
+    background: rgba(91, 91, 91, 0.87);
+    filter: drop-shadow(2px 2px 1px rgba(226, 12, 24, 0.3));
+    border-radius: 5px;
+    padding: 5px 30px;
+    color: #f1f1f1;
+    text-decoration: none;
+}
+
+.product-ses-more a:hover {
+    background: #DC0029;
+
+}
+
+/* Readymade Products Area */
+.readymade-products-area {
+    width: 100%;
+    height: auto;
+    position: relative;
+    margin: 70px 0px;
+}
+
+.readymade-products img {
+    background-size: cover;
+    width: 100%;
+}
+
+.background-2 {
+    position: absolute;
+    right: 0;
+    top: -200px;
+}
+
+.readymade-products-content {
+    text-align: center;
+}
+
+.heading-title h2 {
+    font-family: var(--google-secondary-font-family);
+    font-weight: bold;
+    font-size: 35px;
+    line-height: 57px;
+    letter-spacing: -0.02em;
+    color: #DC0029;
+}
+
+/* Our Service Area */
+.our-service-area {
+    width: 100%;
+    height: auto;
+    position: relative;
+    margin: 70px 0px;
+}
+
+.background-3 {
+    position: absolute;
+    left: 0px;
+    top: -90px;
+}
+
+.service-card {
+    background: #F3F3F3 !important;
+    border-radius: 10px !important;
+    width: 100%;
+    height: max-content;
+}
+
+.service-card p {
+    font-family: var(--google-secondary-font-family);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: -0.02em;
+    color: rgba(0, 0, 0, 0.8);
+
+}
+
+/* Our Clients Area */
+.our-clients-area {
+    width: 100%;
+    height: auto;
+    position: relative;
+    margin: 70px 0px;
+}
+
+/* .client-details {
+    margin: 50px 0px;
+} */
+
+.client-details {
+    margin: 50px;
+}
+
+/* Our Service Area */
+
+.our-contact-area {
+    width: 100%;
+    height: auto;
+    position: relative;
+    margin: 70px 0px;
+}
+
+.contact-details.google-map {
+    width: 100%;
+    height: 450px;
+}
+
+.contact-form {
+    position: relative;
+}
+
+.background-4 {
+    position: absolute;
+    right: -135px;
+    top: -70px;
+}
+
+.contact-details .contact-form {
+    width: 100%;
+    height: 500px;
+    background: #FFFFFF;
+    border: 1px solid #DC0029;
+    box-sizing: border-box;
+    border-radius: 10px;
+    padding: 35px;
+}
+
+.form-control2 {
+    width: 100%;
+    height: 41px;
+    border: none;
+    background: #FFFFFF;
+    box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.25);
+}
+
+textarea.form-control {
+    min-height: calc(6.5em + 0.75rem + 2px);
+    width: 100%;
+    background: #FFFFFF;
+    box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.25);
+}
+
+.contact-button {
+    padding: 5px 10px;
+    background: #DC0029;
+    border-radius: 6px;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+.contact-button:hover {
+    background: #16eb99;
+}
+
+
+
+
+
+
+/* --------------------------- modal area -----------------  */
+
+.grid-product-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+.grid-product-container .modal-card.active{
+    border: 1px solid #DC0029;
+}
+
+
+.modal-header h5 {
+    margin: 0 auto;
+    font-family: var(--google-secondary-font-family);
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 163.15%;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-card {
+    Width: 100%;
+    background: rgba(237, 237, 237, 0.7);
+    border-radius: 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    text-align: center;
+    border: 1px solid transparent;
+}
+
+.modal-card:hover {
+    border-color: #DC0029;
+}
+
+.modal-card img {
+    width: 131.97px;
+    margin: 0 auto;
+}
+
+.modal-card p {
+    font-family: var(--google-secondary-font-family);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    /* line-height: 40px; */
+    letter-spacing: -0.02em;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+/* --------------------------- modal area -----------------  */

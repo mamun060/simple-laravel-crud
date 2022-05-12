@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"/>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/customorder.css">
+     <!-- Site Titile -->
+    <title>E-commerce</title>
+</head>
+<body>
+
+    <!-- Top Header-->
+    <section class="container-fluid top-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h2 class="hotline"> হট লাইন- <a href="tel:01971819813" type="button">০১৯৭-১৮১৯-৮১৩</a></h2>
+                </div>
+                <div class="col-md-6 d-flex align-items-center justify-content-lg-end justify-content-center">
+                    <div class="register-button bg-white btn-group" role="group" >
+                        <button class="btn btn-sm active"> লগ ইন </button>
+                        <button class="btn btn-sm "> রেজিস্টার </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- Main Header-->
+    <header class="container-fluid main-header">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img class="logo" src="images/logo-mic.png" alt="">
+                </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse menu" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                  <li class="nav-item active">
+                    <a class="nav-link" aria-current="page" href="customorder.html"> কাস্টমাইজ </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a class="nav-link" href="shop.html"> শপ </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a class="nav-link" href="#"> গ্যালারী </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a class="nav-link" href="#"> আমাদের সম্পর্কে  </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a class="nav-link" href="#"> যোগাযোগ  </a>
+                  </li>
+                 
+                </ul>
+                <form class="d-flex justify-content-lg-end justify-content-start">
+                    <div class="input-group border rounded">
+                        <input class="form-control" type="search" placeholder=" অনুসন্ধান করুন " aria-label="Search">
+                        <button class="btn d-flex justify-content-center" type="submit"><i class="fas fa-search"></i></button>
+                    </div>
+                </form>
+                <div class="ordertraking">
+                    <a href="#"> <i class="fa-solid fa-truck-fast text-light"></i> অর্ডার ট্রাক করুন </a>
+                </div>
+                <div class="wishlist-icon">
+                    <a href="#"> <i class="fas fa-cart-shopping"></i><span class="cartvalue"> 0 </span></a>
+                </div>
+              </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Breadcrumb Area-->
+    <!-- <section class="container-fluid breadcrumb-area ">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+
+                    <div class="breadcrumb-details d-flex align-items-center justify-content-center">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb mb-0 py-4">
+                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Custom Order</li>
+                            </ol>
+                        </nav>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section> -->
+    
+    <!-- Single Product Area-->
+    <section class="container-fluid custom-product-area my-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="custom-prodect-image-wrapper">
+                        <img src="images/product/Rectangle 98.png" alt="custom product images">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="custom-prodect-info">
+    
+                        <div class="single-prodect-title">
+                            <h2> টি সার্ট </h2>
+                        </div>
+
+                        <div class="single-prodect-description">
+                            <p>
+                                যে কোনো ধরনের কাস্টমাইজড প্রোডাক্ট সামগ্রী তৈরি করতে সর্বনিম্ন খরচে, দ্রুততম সময়ে, সর্বোচ্চ গুণগত  মানের নিশ্চয়তা পাবেন কেবল মাইক্রোমিডিয়ায়।
+                            </p>
+                        </div>
+
+                        <div class="custom-prodect-form">
+                            <div class="form-group">
+                                <label for="customerName"> আপনার নাম </label>
+                                <input type="text" name="customer_name" class="form-control form-control2 border"  id="customerName" placeholder=" আপনার নাম ">
+                            </div>
+                            <div class="form-group">
+                                <label for="customerPhone"> মোবাইল নাম্বার  </label>
+                                <input type="text" name="customer_phone" class="form-control form-control2 border" id="customerPhone" placeholder=" মোবাইল নাম্বার  ">
+                            </div>
+                           
+                            <div class="form-group">
+                                <label for="customerAddress"> আপনার ঠিকানা </label>
+                                <textarea style="resize: none;" name="customer_address" class="form-control border" id="customerAddress" rows="20" cols="10" placeholder=" আপনি কি চাচ্ছেন তা উল্লেখ করুন.... "></textarea>
+                            </div>
+
+                            <div class="button-area form-group row justify-content-between align-items-center">
+                                <div class="col-md-7 mx-0 px-0">
+                                    <input type="file" name="logo" id="customLogo" class="d-none">
+                                    <button class="btn btn-light text-danger w-100" onclick="javascript: document.getElementById('customLogo').click()">
+                                        <span class="fa-solid fa-images"></span><span> লোগো এ্যাড করতে এখানে ক্লিক করুন</span>
+                                    </button>
+                                </div>
+                                <div class="col-md-5 mx-0 px-0 d-flex justify-content-end">
+                                    <button class="btn btn-danger text-white w-custom-95">কনফার্ম করুন</button>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="contact-info row">
+                            <h6 class="mt-4 mb-2">আমাদের সাথে সরাসরি যুক্ত হোন</h6>
+                            <div class="contact-inner-info col-md-12">
+                                <span><i class="fa fa-phone"></i> <span><a href="tel:0123123213123">0123123213123</a></span></span>
+                                <span><i class="fa fa-envelope"></i> <span><a href="mailto:m@gmail.com">m@gmail.com</a></span></span>
+                            </div>
+                        </div>
+
+                    
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Related Product Area-->
+    <section class="container-fluid related-product-area">
+        <div class="container">
+            <div class="heading-title text-center">
+                <h2> আমাদের অন্যান্য পণ্যসমূহ </h2>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="product-slider">
+                        <div class="slider" data-slick='{"slidesToShow": 5, "slidesToScroll": 5}'>                            
+                         
+                            <div class="col-md-3">
+                                <div class="card __product-card">
+                                    <div class="card-wishlist" type="button"> <i class="fa-solid fa-heart"></i></div>
+                                    <img src="./images/slider/slider-5.png" class="card-img-top" alt="...">
+                                    <div class="card-body p-0">
+                                        <div class="card-product-title card-title text-center fw-bold">
+                                            <h5>টি-শার্ট</h5>
+                                        </div>
+                                        <div class="card-product-price card-text text-center fw-bold">
+                                            <h5>বর্তমান মূুল্য- ২২০/= <span class="text-decoration-line-through text-danger"> ২৫০/=  </span></h5>
+                                        </div>
+                                        <div class="card-product-button d-flex justify-content-evenly">
+                                            <button type="button" class="btn btn-sm btn-secondary btn-card">কার্ডে যুক্ত করুন</button>
+                                            <button type="button" class="btn btn-sm btn-danger"> অর্ডার করুন </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div class="col-md-3">
+                                <div class="card __product-card">
+                                    <div class="card-wishlist" type="button"> <i class="fa-solid fa-heart"></i></div>
+                                    <img src="./images/slider/slider-5.png" class="card-img-top" alt="...">
+                                    <div class="card-body p-0">
+                                        <div class="card-product-title card-title text-center fw-bold">
+                                            <h5>টি-শার্ট</h5>
+                                        </div>
+                                        <div class="card-product-price card-text text-center fw-bold">
+                                            <h5>বর্তমান মূুল্য- ২২০/= <span class="text-decoration-line-through text-danger"> ২৫০/=  </span></h5>
+                                        </div>
+                                        <div class="card-product-button d-flex justify-content-evenly">
+                                            <button type="button" class="btn btn-sm btn-secondary btn-card">কার্ডে যুক্ত করুন</button>
+                                            <button type="button" class="btn btn-sm btn-danger"> অর্ডার করুন </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+                                <div class="card __product-card">
+                                    <div class="card-wishlist" type="button"> <i class="fa-solid fa-heart"></i></div>
+                                    <img src="./images/slider/slider-5.png" class="card-img-top" alt="...">
+                                    <div class="card-body p-0">
+                                        <div class="card-product-title card-title text-center fw-bold">
+                                            <h5>টি-শার্ট</h5>
+                                        </div>
+                                        <div class="card-product-price card-text text-center fw-bold">
+                                            <h5>বর্তমান মূুল্য- ২২০/= <span class="text-decoration-line-through text-danger"> ২৫০/=  </span></h5>
+                                        </div>
+                                        <div class="card-product-button d-flex justify-content-evenly">
+                                            <button type="button" class="btn btn-sm btn-secondary btn-card">কার্ডে যুক্ত করুন</button>
+                                            <button type="button" class="btn btn-sm btn-danger"> অর্ডার করুন </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+                                <div class="card __product-card">
+                                    <div class="card-wishlist" type="button"> <i class="fa-solid fa-heart"></i></div>
+                                    <img src="./images/slider/slider-5.png" class="card-img-top" alt="...">
+                                    <div class="card-body p-0">
+                                        <div class="card-product-title card-title text-center fw-bold">
+                                            <h5>টি-শার্ট</h5>
+                                        </div>
+                                        <div class="card-product-price card-text text-center fw-bold">
+                                            <h5>বর্তমান মূুল্য- ২২০/= <span class="text-decoration-line-through text-danger"> ২৫০/=  </span></h5>
+                                        </div>
+                                        <div class="card-product-button d-flex justify-content-evenly">
+                                            <button type="button" class="btn btn-sm btn-secondary btn-card">কার্ডে যুক্ত করুন</button>
+                                            <button type="button" class="btn btn-sm btn-danger"> অর্ডার করুন </button>
+                                        </div>  
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+                                <div class="card __product-card">
+                                    <div class="card-wishlist" type="button"> <i class="fa-solid fa-heart"></i></div>
+                                    <img src="./images/slider/slider-5.png" class="card-img-top" alt="...">
+                                    <div class="card-body p-0">
+                                        <div class="card-product-title card-title text-center fw-bold">
+                                            <h5>টি-শার্ট</h5>
+                                        </div>
+                                        <div class="card-product-price card-text text-center fw-bold">
+                                            <h5>বর্তমান মূুল্য- ২২০/= <span class="text-decoration-line-through text-danger"> ২৫০/=  </span></h5>
+                                        </div>
+                                        <div class="card-product-button d-flex justify-content-evenly">
+                                            <button type="button" class="btn btn-sm btn-secondary btn-card">কার্ডে যুক্ত করুন</button>
+                                            <button type="button" class="btn btn-sm btn-danger"> অর্ডার করুন </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+                                <div class="card __product-card">
+                                    <div class="card-wishlist" type="button"> <i class="fa-solid fa-heart"></i></div>
+                                    <img src="./images/slider/slider-5.png" class="card-img-top" alt="...">
+                                    <div class="card-body p-0">
+                                        <div class="card-product-title card-title text-center fw-bold">
+                                            <h5>টি-শার্ট</h5>
+                                        </div>
+                                        <div class="card-product-price card-text text-center fw-bold">
+                                            <h5>বর্তমান মূুল্য- ২২০/= <span class="text-decoration-line-through text-danger"> ২৫০/=  </span></h5>
+                                        </div>
+                                        <div class="card-product-button d-flex justify-content-evenly">
+                                            <button type="button" class="btn btn-sm btn-secondary btn-card">কার্ডে যুক্ত করুন</button>
+                                            <button type="button" class="btn btn-sm btn-danger"> অর্ডার করুন </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- Our Contact Area-->
+     <section class="container-fluid call-center-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 d-flex align-items-center justify-content-center">
+                    <div class="call-center text-center">
+                        <h2> আপনি যা খুঁজছিলেন তা খুঁজে পাননি? কল করুন:<span> <a href="tel:01971819813" class="text-decoration-none" type="button">০১৯৭-১৮১৯-৮১৩</a></span></h2>
+                    </div>
+                </div>
+            </div>
+        </div>  
+    </section>
+
+     <!-- Footer Area-->
+    <footer class="container-fluid">
+        <div class="container">
+            <div class="row py-4">
+                <div class="col-md-3">
+                    <div class="about-footer">
+                        <div class="footer-logo my-3">
+                            <img class="logo" src="images/logo/footer-logo.png" alt="footer logo">
+                        </div>
+                        <div class="footer-text">
+                            <h2>যে কোনো ধরনের কাস্টমাইজড প্রোডাক্ট সামগ্রী তৈরি করতে সর্বনিম্ন খরচে, দ্রুততম সময়ে, সর্বোচ্চ গুনগত মানের নিশ্চয়তা পাবেন কেবল মাইক্রোমিডিয়ায়। 
+                                আপনার চাহিদা অনুযায়ী যে কোনো ধরনে কাস্টমাইজড প্রিন্টের কাজের অর্ডার করুন উপরের লিস্ট থেকে।   
+                            </h2>
+                        </div>
+                        <div class="footer-social">
+                            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                        </div>
+                       
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="footer-text-header">
+                        <h3> কাস্টমাইজ </h3>
+                    </div>
+                    <div class="category-menu">
+                        <ul class="list-unstyled">
+                            <li><a href=""> টি-সার্ট </a></li>
+                            <li><a href=""> পোলো টি-সার্ট </a></li>
+                            <li><a href=""> চাবির রিং </a></li>
+                            <li><a href=""> ক্যাপ </a></li>
+                            <li><a href=""> মাস্ক </a></li>
+                            <li><a href=""> ছাতা </a></li>
+                            <li><a href=""> মগ </a></li>
+                            <li><a href=""> এ্যাক্রিলিক প্রিংট </a> </li>
+                            <li><a href=""> এসোসিরিজ </a></li>
+                            <li><a href=""> শপিং ব্যাগ </a></li>
+                            <li><a href=""> জ্যারসি</a></li>
+                            <li><a href=""> ছাতা </a></li>
+                            <li><a href=""> ক্রিস্ট </a></li>
+                            
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-md-3">
+                    <div class="footer-text-header">
+                        <h3> মেনু </h3>
+                    </div>
+                   <div class="footer-menu">
+                        <ul class="list-unstyled">
+                            <li><a href=""> এ্যাবাউট</a></li>
+                            <li><a href=""> কন্ট্যাক্ট </a></li>
+                            <li><a href=""> ব্লগ </a></li>
+                            <li><a href=""> এফ এ্যা কিউ </a></li>
+                            <li><a href=""> অর্ডার ট্রাক করুন </a></li>
+                            <li><a href=""> ক্যারির </a></li>
+                            <li><a href=""> একাউন্ট </a></li>
+                        </ul>
+                    </div> 
+                </div>
+                <div class="col-md-3">
+                    <div class="footer-text-header">
+                        <h3>আমাদের অংগ প্রতিষ্ঠান সমূহ</h3>
+                    </div>
+                    <div class="our-organigation">
+                        <ul class="list-unstyled d-flex">
+                            <li><a href=""><img class="img-fluid" src="images/footer/footer-1.png" alt=""></a></li>
+                            <li><a href=""><img class="img-fluid" src="images/footer/footer-2.png" alt=""></a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-address">
+                        <p>আমাদের ঠিকানা-<br>
+                            ২০৭, ডি পি আই মসজিদ মার্কেট, বিতাক মোড়, তেজগাঁও আই/এ, ঢাকা- ১২০৮</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row order-top-color pt-2">
+                
+                    <div class="col-md-6">
+                        <div class="copy-right-footer">
+                            <p> কপিরাইট © ২০২২ মাইক্রোমিডিয়া. সমস্ত অধিকার সংরক্ষিত. </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="footer-privacy-policy">
+                            <ul class="list-unstyled d-flex justify-content-end align-items-start align-items-lg-center flex-column flex-lg-row ">
+                                <li><a href="#"> প্রাইভেসি এন্ড পলিসি </a></li>
+                                <li><a href="#"> টার্মস এন্ড কন্ডিশন </a></li>
+                                <li><a href="#"> সাইটম্যাপ </a></li>
+                            </ul>
+                        </div>
+                    </div>
+               
+            </div>
+        </div>  
+    </footer>
+
+    <!-- JavaScript CDN -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"> </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
+    <script>
+        $(function(){
+
+            $(document).on("click",'.stateChange', incrementDecrementCount)
+
+
+            // ============slider ================== 
+             $('.product-slider .slider').slick({
+                    dots: true,
+                    infinite: false,
+                    speed: 500,
+                    slidesToShow: 5,
+                    slidesToScroll: 5,
+                    // centerMode: true,
+                    responsive: [{
+                        breakpoint: 1024,
+                        settings: {
+                            slidesToShow: 3,
+                            slidesToScroll: 3,
+                            infinite: true,
+                            dots: true
+                        }
+                    }, {
+                        breakpoint: 600,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 2
+                        }
+                    }, {
+                        breakpoint: 480,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    }]
+                });
+            // ============slider ================== 
+
+
+        });
+
+
+        function incrementDecrementCount(e){
+            let 
+            countElem   = $('#count'),
+            count       = Number(countElem.text() ?? 0 ),
+            elem        = $(this),
+            ref         = elem.attr('id'),
+            pattern1    = /(plus|increment|increament)/im,
+            pattern2    = /(minus|decrement|decreament)/im,
+            minCount    = Number(countElem?.attr('data-min') ?? 1),
+            maxCount    = Number(countElem?.attr('data-max') ?? 10);
+
+            if(pattern1.test(ref)){
+
+                count++;
+                if(count > maxCount) count = maxCount;
+
+            }else if(pattern2.test(ref)){
+
+                count--;
+                if(count < minCount) count = minCount;
+            }
+
+            countElem.text(count);
+        }
+        
+    </script>
+
+     
+  
+</body>
+</html>
