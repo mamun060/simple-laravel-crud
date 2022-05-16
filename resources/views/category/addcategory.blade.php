@@ -5,7 +5,7 @@
 @section('content')
 <div class="container">
     <h2 class="text-dark">Add Category  Information</h2>
-    <form action="{{ route('category.category_store')}}" method="POST">
+    <form action="{{ route('category.category_store')}}" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="row">
                 <div class="col-md-6">

@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>@yield('title','Micro Midea')</title>
+    <title>@yield('title','Thaise Saloon')</title>
 
     <!-- Custom fonts for this template-->
     <link href="{{ asset('assets/common_assets/libs/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
@@ -125,7 +125,7 @@
     <script src="{{ asset('assets/common_assets/libs/select2/js/select2.min.js') }}"></script>
 
     <script src="{{ asset('assets/backend/libs/notifications/sweetalert.min.js') }}"></script>
-    <script src="{{ asset('assets/backend/js/config.js') }}"></script>
+    
 
     @stack('js')
 

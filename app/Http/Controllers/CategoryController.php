@@ -43,7 +43,7 @@ class CategoryController extends Controller
             if( $request->hasFile( 'category_image')) {
                 $image      = $request->file( 'category_image');
                 $photo_name = md5(time().rand()).'.'. $image->getClientOriginalExtension() ;
-                $image->move( public_path('blogImg/'), $photo_name) ;
+                $image->move( public_path('category/'), $photo_name) ;
             } else {
                 $photo_name = "" ;
             }
@@ -55,8 +55,8 @@ class CategoryController extends Controller
                 'is_active'             => $request->isActive
             ]);
 
-            $about = Category::create($data);
-            if(!$about)
+            $category = Category::create($data);
+            if(!$category)
                 throw new Exception("Unable to create Category Information!", 403);
 
                 return redirect(route('category.category_list'));
@@ -85,7 +85,7 @@ class CategoryController extends Controller
      */
     public function edit(Category $category)
     {
-        //
+        return view('category.editcategory', compact('category'));
     }
 
     /**
@@ -97,7 +97,33 @@ class CategoryController extends Controller
      */
     public function update(Request $request, Category $category)
     {
-        //
+        try {
+            //    dd($request->all());
+    
+                if( $request->hasFile( 'category_image')) {
+                    $image      = $request->file( 'category_image');
+                    $photo_name = md5(time().rand()).'.'. $image->getClientOriginalExtension() ;
+                    $image->move( public_path('category/'), $photo_name) ;
+                } else {
+                    $photo_name = "" ;
+                }
+    
+                $data = ([
+                    'category_name'         => $request->category_name,
+                    'category_description'  => $request->category_description,
+                    'category_image'        => $photo_name,
+                    'is_active'             => $request->isActive
+                ]);
+    
+                $category = $category->update($data);
+                if(!$category)
+                    throw new Exception("Unable to update Category Information!", 403);
+    
+                    return redirect(route('category.category_list'));
+    
+           } catch (\Throwable $th) {
+               //throw $th;
+           }
     }
 
     /**

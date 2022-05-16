@@ -34,13 +34,13 @@
                                         <td>{{ $item->subcategory_name ?? 'N/A' }}</td>
                                         <td>{{ $item->category->category_name ?? 'N/A' }}</td>
                                         <td>{{ $item->subcategory_description ?? 'N/A' }}</td>
-                                        <td>{{ $item->subcategory_image ?? 'N/A' }}</td>
+                                        <td><img style="width: 50px;" src="{{ URL::to( 'subcategory') . '/' . $item->subcategory_image }}" alt=""></td>
                                         <td class="text-center">
                                             {!! $item->is_active ? '<span class="badge badge-success">Active </span>' : '<span class="badge badge-danger">In-Active </span>' !!}
                                         </td>
                                         <td class="text-center">
-                                            <a href="javascript:void(0)" class="fa fa-eye text-info text-decoration-none"></a>
-                                            <a href="javacript:void(0)" class="fa fa-edit mx-2 text-warning text-decoration-none"></a>
+                                            {{-- <a href="javascript:void(0)" class="fa fa-eye text-info text-decoration-none"></a> --}}
+                                            <a href="{{ route('subcategory.edit_subcategory', $item->id )}}" class="fa fa-edit mx-2 text-warning text-decoration-none"></a>
                                             <a href="{{ route('subcategory.destroy_sub_category', $item->id )}}" onClick="alert('Are you sure!')" class="fa fa-trash text-danger text-decoration-none"></a>
                                         </td>
                                     </tr>

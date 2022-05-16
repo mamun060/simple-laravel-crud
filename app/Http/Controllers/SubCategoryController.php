@@ -39,37 +39,35 @@ class SubCategoryController extends Controller
      */
     public function store(Request $request)
     {
-        {
-            try {
-                // dd($request->all());
-                // dd($request->hasFile('category_image'));
+        try {
+            // dd($request->all());
+            // dd($request->hasFile('category_image'));
 
-                 if( $request->hasFile('category_image')) {
-                     $image         = $request->file('category_image');
-                     $photo_name    = md5(time().rand()).'.'. $image->getClientOriginalExtension() ;
-                     $image->move( public_path('category/'), $photo_name) ;
-                 } else {
-                     $photo_name = "" ;
-                 }
-     
-                 $data = ([
-                     'category_id'              => $request->category_id,
-                     'subcategory_name'         => $request->category_name,
-                     'subcategory_description'  => $request->category_description,
-                     'subcategory_image'        => $photo_name,
-                     'is_active'                => $request->isActive
-                 ]);
-     
-                 $about = SubCategory::create($data);
-                 if(!$about)
-                     throw new Exception("Unable to create Sub Category Information!", 403);
-     
-                 return redirect(route('subcategory.sub_category'));
-     
-            } catch (\Throwable $th) {
-                //throw $th;
-            }
-         }
+             if( $request->hasFile('category_image')) {
+                 $image         = $request->file('category_image');
+                 $photo_name    = md5(time().rand()).'.'. $image->getClientOriginalExtension() ;
+                 $image->move( public_path('subcategory/'), $photo_name) ;
+             } else {
+                 $photo_name = "" ;
+             }
+ 
+             $data = ([
+                 'category_id'              => $request->category_id,
+                 'subcategory_name'         => $request->category_name,
+                 'subcategory_description'  => $request->category_description,
+                 'subcategory_image'        => $photo_name,
+                 'is_active'                => $request->isActive
+             ]);
+ 
+             $subcategory = SubCategory::create($data);
+             if(!$subcategory)
+                 throw new Exception("Unable to create Sub Category Information!", 403);
+ 
+             return redirect(route('subcategory.sub_category'));
+ 
+        } catch (\Throwable $th) {
+            //throw $th;
+        }
     }
 
     /**
@@ -91,7 +89,8 @@ class SubCategoryController extends Controller
      */
     public function edit(SubCategory $subCategory)
     {
-        //
+        $categories = Category::where('is_active', 1)->get();
+        return view('category.editsubcategory', compact('subCategory','categories'));
     }
 
     /**
@@ -103,7 +102,35 @@ class SubCategoryController extends Controller
      */
     public function update(Request $request, SubCategory $subCategory)
     {
-        //
+        try {
+            // dd($request->all());
+            // dd($request->hasFile('category_image'));
+
+             if( $request->hasFile('category_image')) {
+                 $image         = $request->file('category_image');
+                 $photo_name    = md5(time().rand()).'.'. $image->getClientOriginalExtension() ;
+                 $image->move( public_path('subcategory/'), $photo_name) ;
+             } else {
+                 $photo_name = "" ;
+             }
+ 
+             $data = ([
+                 'category_id'              => $request->category_id,
+                 'subcategory_name'         => $request->category_name,
+                 'subcategory_description'  => $request->category_description,
+                 'subcategory_image'        => $photo_name,
+                 'is_active'                => $request->isActive
+             ]);
+ 
+             $subcategory = $subCategory->update($data);
+             if(!$subcategory)
+                 throw new Exception("Unable to update Sub Category Information!", 403);
+ 
+             return redirect(route('subcategory.sub_category'));
+ 
+        } catch (\Throwable $th) {
+            //throw $th;
+        }
     }
 
     /**

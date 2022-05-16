@@ -5,17 +5,21 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class SubCategory extends Model
+class Post extends Model
 {
     use HasFactory;
     protected $guarded = ['id'];
 
-    public function category()
-    {
+    public function category(){
         return $this->belongsTo(Category::class);
     }
-    
-    public function posts(){
-        return $this->hasMany(Post::class, 'post_id');
+
+    public function subcategory(){
+        return $this->belongsTo(SubCategory::class);
     }
+
+    public function comment(){
+        return $this->belongsTo(Post::class);
+    }
+
 }

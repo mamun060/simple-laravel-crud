@@ -5,8 +5,9 @@
 @section('content')
 <div class="container">
     <h2 class="text-dark">Add Sub Category Information</h2>
-    <form action="{{ route('subcategory.store_sub_category')}}" method="POST" enctype="multipart/form-data">
+    <form action="{{ route('subcategory.subcategory_update', $subCategory->id )}}" method="POST" enctype="multipart/form-data">
         @csrf
+        @method('PUT')
         <div class="row">
             <div class="col-md-12">
                 <select name="category_id" id="" class="form-control text-dark">
@@ -15,7 +16,6 @@
                             <option value="{{ $category->id }}"> {{ $category->category_name }} </option>
                         @endforeach
                     @endisset
-               
                 {{-- <option value="0">1</option>
                 <option value="0">1</option>
                 <option value="0">1</option>
@@ -24,11 +24,11 @@
             </div>
                 <div class="col-md-6">
                     <label for="name">Category Name</label>
-                    <input id="name"  name="category_name" type="text" class="form-control">
+                    <input id="name"  name="category_name" type="text" class="form-control" value="{{ $subCategory->subcategory_name}}">
                 </div>
                 <div class="col-md-6">
                     <label for="name">Category Description</label>
-                    <input id="name"  name="category_description" type="text" class="form-control">
+                    <input id="name"  name="category_description" type="text" class="form-control" value="{{ $subCategory->subcategory_description}}">
                 </div>
                 <div class="col-md-12 mt-2 mb-2">
                     <label for="category_image">Category Thumbnail</label>

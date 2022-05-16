@@ -1,38 +1,25 @@
 @extends('layouts.master')
 
-@section('title', 'Add Sub Category page')
+@section('title', 'Add Category page')
 
 @section('content')
 <div class="container">
-    <h2 class="text-dark">Add Sub Category Information</h2>
-    <form action="{{ route('subcategory.store_sub_category')}}" method="POST" enctype="multipart/form-data">
+    <h2 class="text-dark">Edit Category Information</h2>
+    <form action="{{ route('category.update_category', $category->id )}}" method="POST" enctype="multipart/form-data">
         @csrf
+        @method('PUT')
         <div class="row">
-            <div class="col-md-12">
-                <select name="category_id" id="" class="form-control text-dark">
-                    @isset($categories)
-                        @foreach ($categories as $category)
-                            <option value="{{ $category->id }}"> {{ $category->category_name }} </option>
-                        @endforeach
-                    @endisset
-               
-                {{-- <option value="0">1</option>
-                <option value="0">1</option>
-                <option value="0">1</option>
-                <option value="0">1</option> --}}
-                </select>
-            </div>
                 <div class="col-md-6">
                     <label for="name">Category Name</label>
-                    <input id="name"  name="category_name" type="text" class="form-control">
+                    <input id="name"  name="category_name" type="text" class="form-control" value="{{ $category->category_name }}">
                 </div>
                 <div class="col-md-6">
                     <label for="name">Category Description</label>
-                    <input id="name"  name="category_description" type="text" class="form-control">
+                    <input id="name"  name="category_description" type="text" class="form-control" value="{{ $category->category_description }}" >
                 </div>
                 <div class="col-md-12 mt-2 mb-2">
-                    <label for="category_image">Category Thumbnail</label>
-                    <input name="category_image" id="category_image" type="file">
+                    <label for="">Category Thumbnail</label>
+                    <input name="category_image" type="file" value="{{ $category->category_image }}">
                 </div>
                 <div class="col-md-12">
                     <label for="">Category Status</label>
