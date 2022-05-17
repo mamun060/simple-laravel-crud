@@ -39,11 +39,11 @@
                      <div class="d-flex">
                          <div class="mr-2">
                             <label for="active">Active</label>
-                            <input type="radio" name="isActive" id="active" value="1" checked>
+                            <input type="radio" {{ $subCategory->is_active ? 'checked' : ''}} name="isActive" id="active" value="1" checked>
                          </div>
                          <div>
                             <label for="inactive">Inactive</label>
-                            <input type="radio" name="isActive" id="inactive" value="0">
+                            <input type="radio" {{ $subCategory->is_active ? '' : 'checked'}} name="isActive" id="inactive" value="0">
                          </div>
                      </div>
                 </div>

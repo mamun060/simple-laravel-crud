@@ -41,11 +41,13 @@ Route::group(['prefix' => 'subcategories', 'as' => 'subcategory.'], function(){
     Route::get('/{subCategory}',        [SubCategoryController::class, 'destroy'])->name('destroy_sub_category');
 });
 
-
 Route::group(['prefix' => 'posts', 'as' => 'post.'], function(){
     Route::get('/post-list',        [PostController::class, 'index'])->name('post_list');
     Route::get('/add-post',         [PostController::class, 'create'])->name('add_post');
+    Route::get('/show-post/{post}', [PostController::class, 'show'])->name('show_post');
     Route::post('/store-post',      [PostController::class, 'store'])->name('store_post');
+    Route::get('/edit-post/{post}', [PostController::class, 'edit'])->name('edit_post');
+    Route::put('/update/{post}',    [PostController::class, 'update'])->name('update_post');
     Route::get('/{post}',           [PostController::class, 'destroy'])->name('destroy_post');
 });
 

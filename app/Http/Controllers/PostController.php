@@ -72,8 +72,8 @@ class PostController extends Controller
                 'slug'                  => Str::slug($request->title),
                 'thumbnail'             => $thumbnail_name,
                 'description'           => $request->description,
-                'is_active'             => 0,
-                'is_archive'            => 0,
+                'is_active'             => $request->is_active,
+                'is_archive'            => $request->is_publish,
                 // 'created_by'            => null,
                 // 'created_name'          => null,
                 // 'updated_by'            => null,
@@ -99,7 +99,7 @@ class PostController extends Controller
      */
     public function show(Post $post)
     {
-        //
+        return view('post.viewpost', compact('post'));
     }
 
     /**
@@ -110,7 +110,10 @@ class PostController extends Controller
      */
     public function edit(Post $post)
     {
-        //
+        $categories = Category::where('is_active', 1)->get();
+        $subcategories = SubCategory::where('is_active', 1)->get();
+
+        return view('post.editpost', compact('post','categories','subcategories'));
     }
 
     /**
@@ -122,7 +125,49 @@ class PostController extends Controller
      */
     public function update(Request $request, Post $post)
     {
-        //
+        try {
+            // dd($request->all());
+
+            if( $request->hasFile('new_thumbnail')) {
+                $image          = $request->file('new_thumbnail');
+                $thumbnail_name = md5(time().rand()).'.'. $image->getClientOriginalExtension() ;
+                $image->move( public_path('blogImg/'), $thumbnail_name) ;
+            } else {
+                $thumbnail_name = "" ;
+            }
+
+            $category = Category::select('category_name')
+                        ->find($request->category_id);
+
+            $subcategory = SubCategory::select('subcategory_name')
+                        ->find( $request->subcategory_id);
+
+            $data = [
+                'category_id'           => $request->category_id,
+                'subcategory_id'        => $request->subcategory_id,
+                'category_name'         => $category->category_name ?? null,
+                'subcategory_name'      => $subcategory->subcategory_name ?? null,
+                'title'                 => $request->title,
+                'slug'                  => Str::slug($request->title),
+                'thumbnail'             => $thumbnail_name,
+                'description'           => $request->description,
+                'is_active'             => $request->is_active,
+                'is_archive'            => $request->is_publish,
+                // 'created_by'            => null,
+                // 'created_name'          => null,
+                // 'updated_by'            => null,
+                // 'updated_name'          => null
+            ];
+
+            $post = $post->update($data);
+            if(!$post)
+                throw new Exception("Unable to update Post Information!", 403);
+
+            return redirect(route('post.post_list'));
+
+        } catch (\Throwable $th) {
+            //throw $th;
+        }
     }
 
     /**

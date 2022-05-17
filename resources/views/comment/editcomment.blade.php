@@ -40,11 +40,11 @@
                          <div class="d-flex">
                              <div class="mr-2">
                                 <label for="active">Active</label>
-                                <input type="radio" name="is_active" id="active" value="1" checked>
+                                <input type="radio" {{ $comment->is_active ? 'checked' : '' }} name="is_active" id="active" value="1">
                              </div>
                              <div>
                                 <label for="inactive">Inactive</label>
-                                <input type="radio" name="is_active" id="inactive" value="0">
+                                <input type="radio" {{ $comment->is_active ? '' : 'checked' }} name="is_active" id="inactive" value="0">
                              </div>
                          </div>
                     </div>

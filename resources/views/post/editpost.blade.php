@@ -5,9 +5,10 @@
 @section('content')
     <div>
         <div class="container">
-            <h2>Add Post Information</h2>
-            <form action="{{route('post.store_post')}}" method="POST" enctype="multipart/form-data">
+            <h2>Edit Post Informaiton</h2>
+            <form action="{{route('post.update_post', $post->id )}}" method="POST" enctype="multipart/form-data">
                 @csrf
+                @method('PUT')
                 <div class="row">
                     <div class="col-md-6">
                         <label for="category">Parent Category</label>
@@ -31,32 +32,40 @@
                     </div>
                     <div class="col-md-6">
                         <label for="title">Post Title</label>
-                        <input name="title" type="text" class="form-control" id="title">
-                    </div>
-                    <div class="col-md-6">
-                        <label for="thumbnail">Post Thumbnail</label>
-                        <input name="thumbnail" id="thumbnail" type="file" class="form-control">
-                    </div>
-                    <div class="col-md-12">
-                        <label for="description">Post Content</label>
-                        <textarea name="description" id="description" cols="30" rows="5" class="form-control"></textarea>
+                        <input name="title" type="text" class="form-control" id="title" value="{{ $post->title }}">
                     </div>
 
-                    <div class="col-md-12 mt-2">
+                    <div class="col-md-6 d-flex align-items-end">
+                        {{-- <div class="form-group mr-2">
+                            <img style="width: 50px;" src="{{ URL::to( 'blogImg') . '/' . $post->thumbnail }}" alt="">
+                        </div> --}}
+
+                        <div>
+                            <label for="thumbnail">Post Thumbnail</label>
+                            <input name="new_thumbnail" id="thumbnail" type="file" class="form-control" value="{{ $post->thumbnail }}">
+                        </div>
+                    </div>
+
+                    <div class="col-md-12">
+                        <label for="description">Post Content</label>
+                        <textarea name="description" id="description" cols="30" rows="5" class="form-control">{{ $post->description }}</textarea>
+                    </div>
+
+                    <div class="col-md-2 mt-2">
                         <label for="">Post Status</label>
                          <div class="d-flex">
                              <div class="mr-2">
                                 <label for="active">Active</label>
-                                <input type="radio" name="is_active" id="active" value="1" checked>
+                                <input type="radio" {{ $post->is_active ? 'checked' : '' }} name="is_active" id="active" value="1">
                              </div>
                              <div>
                                 <label for="inactive">Inactive</label>
-                                <input type="radio" name="is_active" id="inactive" value="0">
+                                <input type="radio" {{ $post->is_active ? '' : 'checked' }} name="is_active" id="inactive" value="0">
                              </div>
                          </div>
                     </div>
 
-                    <div class="col-md-12 mt-2">
+                    <div class="col-md-6 mt-2">
                         <label for="">Post Publish</label>
                          <div class="d-flex">
                              <div class="mr-2">
