@@ -1,10 +1,10 @@
-@extends('layouts.master')
+{{-- @extends('layouts.master')
 
-@section('title', 'Edit Category')
+@section('title', 'Edit Service Category')
 
 @section('content')
 <div class="container">
-    <h2 class="text-dark">Edit Category Information</h2>
+    <h2 class="text-dark">Edit Service Category Information</h2>
     <form action="{{ route('category.update_category', $category->id )}}" method="POST" enctype="multipart/form-data">
         @csrf
         @method('PUT')
@@ -40,4 +40,4 @@
         </div>
     </form>
 </div>
-@endsection
+@endsection --}}

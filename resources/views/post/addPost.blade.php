@@ -39,7 +39,7 @@
                     </div>
                     <div class="col-md-12">
                         <label for="description">Post Content</label>
-                        <textarea name="description" id="description" cols="30" rows="5" class="form-control"></textarea>
+                        <textarea name="description" id="description" cols="30" rows="10" class="form-control"></textarea>
                     </div>
 
                     <div class="col-md-12 mt-2">
@@ -70,6 +70,16 @@
                          </div>
                     </div>
 
+                    <div class="col-md-12 mt-2 mb-2">
+                        <div>
+                            <label for="tags">Tags</label>
+                                <select id="tags_select" class="form-control" name="state" multiple>
+                                   
+                                </select>
+                        </div>
+                        <span class="v-msg"></span>
+                    </div>
+
                     <div class="col-md-12">
                         <input class="btn btn-success" type="submit" value="Submit">
                     </div>
@@ -79,3 +89,21 @@
         </div>
     </div>
 @endsection
+
+@push('css')
+    <link href="{{ asset('assets/backend/css/currency/currency.css')}}" rel="stylesheet">
+    <link href="{{ asset('assets/backend/libs/summernote/summernote.css')}}" rel="stylesheet">
+@endpush
+
+@push('js')
+    <script src="{{ asset('assets/backend/libs/summernote/summernote.js') }}"></script>
+    <script>
+        $('#description').summernote()
+
+        $(document).ready(function() {
+            $('#tags_select').select2({
+                tags: true
+            });
+        });
+    </script>
+@endpush

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateCategoriesTable extends Migration
+class CreateServiceCategoriesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,10 @@ class CreateCategoriesTable extends Migration
      */
     public function up()
     {
-        Schema::create('categories', function (Blueprint $table) {
+        Schema::create('service_categories', function (Blueprint $table) {
             $table->id();
-            $table->string('category_name', 255)->nullable()->unique();
-            $table->text('category_description', 500)->nullable();
+            $table->string('service_cat_name', 255)->nullable()->unique();
+            $table->text('service_cat_description', 500)->nullable();
             $table->string('category_image')->nullable();
             $table->boolean('is_active')->default(0);
             $table->timestamps();
@@ -30,6 +30,6 @@ class CreateCategoriesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('categories');
+        Schema::dropIfExists('service_categories');
     }
 }

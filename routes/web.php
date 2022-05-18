@@ -4,6 +4,7 @@ use App\Http\Controllers\BlogController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\ServiceCategoryController;
 use App\Http\Controllers\SubCategoryController;
 use Illuminate\Support\Facades\Route;
 
@@ -59,3 +60,7 @@ Route::group(['prefix' => 'comments', 'as' => 'comment.'], function(){
     Route::put('/{comment}/update',         [CommentController::class, 'update'])->name('update_comment');
     Route::get('/{comment}',                [CommentController::class, 'destroy'])->name('destroy_comment');
 });
+
+// Route::group(['prefix' => 'serviceCategories', 'as' => 'serviceCategory.'], function(){
+//     Route::get('/', [ServiceCategoryController::class, 'index'])->name('service_cat_list');
+// });
