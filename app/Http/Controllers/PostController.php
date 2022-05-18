@@ -133,7 +133,7 @@ class PostController extends Controller
                 $thumbnail_name = md5(time().rand()).'.'. $image->getClientOriginalExtension() ;
                 $image->move( public_path('blogImg/'), $thumbnail_name) ;
             } else {
-                $thumbnail_name = "" ;
+                $thumbnail_name = $post ? $post->thumbnail : null ;
             }
 
             $category = Category::select('category_name')

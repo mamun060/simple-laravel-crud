@@ -105,7 +105,7 @@ class CategoryController extends Controller
                     $photo_name = md5(time().rand()).'.'. $image->getClientOriginalExtension() ;
                     $image->move( public_path('category/'), $photo_name) ;
                 } else {
-                    $photo_name = "" ;
+                    $photo_name = $category ? $category->category_image : null ;
                 }
     
                 $data = ([

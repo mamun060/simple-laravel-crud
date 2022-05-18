@@ -111,7 +111,7 @@ class SubCategoryController extends Controller
                  $photo_name    = md5(time().rand()).'.'. $image->getClientOriginalExtension() ;
                  $image->move( public_path('subcategory/'), $photo_name) ;
              } else {
-                 $photo_name = "" ;
+                 $photo_name = $subCategory ? $subCategory->subcategory_image : null;
              }
  
              $data = ([
