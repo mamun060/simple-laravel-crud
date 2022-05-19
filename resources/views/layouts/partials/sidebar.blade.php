@@ -73,7 +73,7 @@
         </a>
         <div id="service_category" class="collapse" aria-labelledby="service_category" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-                <a class="collapse-item" href="#">Service Category</a>
+                <a class="collapse-item" href="{{ route('serviceCategory.service_cat_list') }}">Service Category</a>
             </div>
         </div>
     </li>

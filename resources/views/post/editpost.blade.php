@@ -79,6 +79,16 @@
                          </div>
                     </div>
 
+                    <div class="col-md-12 mt-2 mb-2">
+                        <div>
+                            <label for="tags">Tags</label>
+                                <select name="tags" id="tags_select" class="form-control" name="state" multiple>
+                                   
+                                </select>
+                        </div>
+                        <span class="v-msg"></span>
+                    </div>
+
                     <div class="col-md-12">
                         <input class="btn btn-success" type="submit" value="Submit">
                     </div>
@@ -88,3 +98,20 @@
         </div>
     </div>
 @endsection
+
+@push('css')
+    <link href="{{ asset('assets/backend/libs/summernote/summernote.css')}}" rel="stylesheet">
+@endpush
+
+@push('js')
+    <script src="{{ asset('assets/backend/libs/summernote/summernote.js') }}"></script>
+    <script>
+        $('#description').summernote()
+
+        $(document).ready(function() {
+            $('#tags_select').select2({
+                tags: true
+            });
+        });
+    </script>
+@endpush

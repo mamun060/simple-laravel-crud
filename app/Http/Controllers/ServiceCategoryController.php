@@ -43,26 +43,26 @@ class ServiceCategoryController extends Controller
                 if( $request->hasFile( 'category_image')) {
                     $image      = $request->file( 'category_image');
                     $photo_name = md5(time().rand()).'.'. $image->getClientOriginalExtension() ;
-                    $image->move( public_path('category/'), $photo_name) ;
+                    $image->move( public_path('ServiceCategory/'), $photo_name) ;
                 } else {
                     $photo_name = "" ;
                 }
     
-                $data = ([
+                $data = [
                     'service_cat_name'          => $request->category_name,
                     'service_cat_description'   => $request->category_description,
                     'category_image'            => $photo_name,
                     'is_active'                 => $request->isActive
-                ]);
+                ];
     
                 $category = ServiceCategory::create($data);
                 if(!$category)
                     throw new Exception("Unable to create Service Category Information!", 403);
     
-                    return redirect(route('service'));
+                    return redirect(route('serviceCategory.service_cat_list'));
     
            } catch (\Throwable $th) {
-               //throw $th;
+                return back()->withErrors($th->getMessage())->withInput();
            }
     }
 
@@ -85,7 +85,7 @@ class ServiceCategoryController extends Controller
      */
     public function edit(ServiceCategory $serviceCategory)
     {
-        //
+        return view('service_category.serviceCatEdit', compact('serviceCategory'));
     }
 
     /**
@@ -97,7 +97,33 @@ class ServiceCategoryController extends Controller
      */
     public function update(Request $request, ServiceCategory $serviceCategory)
     {
-        //
+        try {
+            //    dd($request->all());
+    
+                if( $request->hasFile( 'category_image')) {
+                    $image      = $request->file( 'category_image');
+                    $photo_name = md5(time().rand()).'.'. $image->getClientOriginalExtension() ;
+                    $image->move( public_path('ServiceCategory/'), $photo_name) ;
+                } else {
+                    $photo_name = $serviceCategory ? $serviceCategory->category_image :  null ;
+                }
+    
+                $data = [
+                    'service_cat_name'          => $request->category_name,
+                    'service_cat_description'   => $request->category_description,
+                    'category_image'            => $photo_name,
+                    'is_active'                 => $request->isActive
+                ];
+    
+                $category = $serviceCategory->update($data);
+                if(!$category)
+                    throw new Exception("Unable to update Service Category Information!", 403);
+    
+                    return redirect(route('serviceCategory.service_cat_list'));
+    
+           } catch (\Throwable $th) {
+               //throw $th;
+           }
     }
 
     /**
@@ -108,6 +134,16 @@ class ServiceCategoryController extends Controller
      */
     public function destroy(ServiceCategory $serviceCategory)
     {
-        //
+        {
+            try {
+                $deleted = $serviceCategory->delete();
+                if(!$deleted)
+                    throw new Exception("Unable to delete service category!", 403);
+    
+                    return redirect(route('serviceCategory.service_cat_list'));
+            } catch (\Throwable $th) {
+               
+            }
+        }
     }
 }

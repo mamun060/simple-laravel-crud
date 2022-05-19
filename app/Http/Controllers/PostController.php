@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Category;
 use App\Models\Post;
+use App\Models\PostTag;
 use App\Models\SubCategory;
 use Exception;
 use Illuminate\Http\Request;
@@ -43,8 +44,13 @@ class PostController extends Controller
     public function store(Request $request)
     {
         try {
-            // dd($request->all());
-
+            
+            if(!($request->tags))
+                throw new Exception("Error Processing Request", 403);
+            
+            if(!count($request->tags))
+                throw new Exception("Please selct tafgs", 403);
+                
             if( $request->hasFile('thumbnail')) {
                 $image      = $request->file('thumbnail');
                 $thumbnail_name = md5(time().rand()).'.'. $image->getClientOriginalExtension() ;
@@ -60,9 +66,6 @@ class PostController extends Controller
 
             $subcategory = SubCategory::select('subcategory_name')
                         ->find( $request->subcategory_id);
-
-            // dd($category_name, $subcategory_name);
-
             $data = [
                 'category_id'           => $request->category_id,
                 'subcategory_id'        => $request->subcategory_id,
@@ -84,10 +87,12 @@ class PostController extends Controller
             if(!$post)
                 throw new Exception("Unable to create Post Information!", 403);
 
+            $post->tags()->attach($request->tags);
+           
             return redirect(route('post.post_list'));
 
         } catch (\Throwable $th) {
-            //throw $th;
+            return back()->withErrors($th->getMessage())->withInput();
         }
     }
 

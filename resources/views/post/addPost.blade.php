@@ -4,6 +4,15 @@
 
 @section('content')
     <div>
+        @if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
         <div class="container">
             <h2>Add Post Information</h2>
             <form action="{{route('post.store_post')}}" method="POST" enctype="multipart/form-data">
@@ -11,7 +20,7 @@
                 <div class="row">
                     <div class="col-md-6">
                         <label for="category">Parent Category</label>
-                        <select name="category_id" id="category" class="form-control">
+                        <select name="category_id" id="category" class="form-control" >
                             @isset($categories)
                                 @foreach ($categories as $category)
                                     <option value="{{ $category->id }}">{{ $category->category_name }}</option>
@@ -31,7 +40,7 @@
                     </div>
                     <div class="col-md-6">
                         <label for="title">Post Title</label>
-                        <input name="title" type="text" class="form-control" id="title">
+                        <input name="title" type="text" class="form-control" value="{{ old('title')}}" id="title">
                     </div>
                     <div class="col-md-6">
                         <label for="thumbnail">Post Thumbnail</label>
@@ -73,7 +82,7 @@
                     <div class="col-md-12 mt-2 mb-2">
                         <div>
                             <label for="tags">Tags</label>
-                                <select id="tags_select" class="form-control" name="state" multiple>
+                                <select name="tags[]" id="tags_select" class="form-control" name="state" multiple>
                                    
                                 </select>
                         </div>

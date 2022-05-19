@@ -66,7 +66,7 @@ class SubCategoryController extends Controller
              return redirect(route('subcategory.sub_category'));
  
         } catch (\Throwable $th) {
-            //throw $th;
+            return back()->withErrors($th->getMessage())->withInput();
         }
     }
 

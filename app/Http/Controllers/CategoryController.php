@@ -62,7 +62,7 @@ class CategoryController extends Controller
                 return redirect(route('category.category_list'));
 
        } catch (\Throwable $th) {
-           //throw $th;
+            return back()->withErrors($th->getMessage())->withInput();
        }
     }
 

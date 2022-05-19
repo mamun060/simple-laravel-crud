@@ -30,7 +30,7 @@
 
                         <tr>
                             <th>Post Description</th>
-                            <td>{{ $post->description }}</td>
+                            <td>{!! $post->description ?? 'N/A' !!}</td>
                         </tr>
 
                         <tr>

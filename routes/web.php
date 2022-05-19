@@ -61,6 +61,11 @@ Route::group(['prefix' => 'comments', 'as' => 'comment.'], function(){
     Route::get('/{comment}',                [CommentController::class, 'destroy'])->name('destroy_comment');
 });
 
-// Route::group(['prefix' => 'serviceCategories', 'as' => 'serviceCategory.'], function(){
-//     Route::get('/', [ServiceCategoryController::class, 'index'])->name('service_cat_list');
-// });
+Route::group(['prefix' => 'serviceCategories', 'as' => 'serviceCategory.'], function(){
+    Route::get('/', [ServiceCategoryController::class, 'index'])->name('service_cat_list');
+    Route::get('/create-service-cat', [ServiceCategoryController::class, 'create'])->name('service_cat_create');
+    Route::post('/store-service-cat', [ServiceCategoryController::class, 'store'])->name('service_cat_store');
+    Route::get('/edit-service-cat/{serviceCategory}', [ServiceCategoryController::class, 'edit'])->name('service_cat_edit');
+    Route::put('/update/{serviceCategory}', [ServiceCategoryController::class, 'update'])->name('service_cat_update');
+    Route::get('/{serviceCategory}',  [ServiceCategoryController::class, 'destroy'])->name('service_cat_destroy');
+});

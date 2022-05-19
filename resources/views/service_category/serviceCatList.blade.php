@@ -9,7 +9,7 @@
 
             <div class="card-header py-3 d-flex justify-content-between align-items-center">
                 <h6 class="m-0 font-weight-bold text-primary"><a href="/" class="text-decoration-none">Service Categories</a> </h6>
-                <button class="btn btn-sm btn-info" id="add"><i class="fa fa-plus"> <a class="text-white decoration-none" href="{{ route('category.add_category')}}">Add Category</a></i></button>
+                <button class="btn btn-sm btn-info" id="add"><i class="fa fa-plus"> <a class="text-white decoration-none" href="{{ route('serviceCategory.service_cat_create')}}">Add Category</a></i></button>
             </div>
 
             <div class="card-body">
@@ -37,8 +37,8 @@
                                             {!! $item->is_active ? '<span class="badge badge-success">Active </span>' : '<span class="badge badge-danger">In-Active </span>' !!}
                                         </td>
                                         <td class="text-center">
-                                            <a href="{{  route('category.category_edit', $item->id ) }}" class="fa fa-edit mx-2 text-warning text-decoration-none"></a>
-                                            <a href="{{ route('category.destroy_category', $item->id )}}" onClick="alert('Are you sure!')" class="fa fa-trash text-danger text-decoration-none"></a>
+                                            <a href="{{  route('serviceCategory.service_cat_edit', $item->id ) }}" class="fa fa-edit mx-2 text-warning text-decoration-none"></a>
+                                            <a href="{{ route('serviceCategory.service_cat_destroy', $item->id )}}" onClick="alert('Are you sure!')" class="fa fa-trash text-danger text-decoration-none"></a>
                                         </td>
                                     </tr>
                                 @endforeach

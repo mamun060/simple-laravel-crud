@@ -3,9 +3,9 @@
 @section('title', 'Add Service Category')
 
 @section('content')
-{{-- <div class="container">
+<div class="container">
     <h2 class="text-dark">Add Service Category Information</h2>
-    <form action="{{ route('category.category_store')}}" method="POST" enctype="multipart/form-data">
+    <form action="{{ route('serviceCategory.service_cat_store')}}" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="row">
                 <div class="col-md-6">
@@ -38,5 +38,5 @@
                 </div>
         </div>
     </form>
-</div> --}}
+</div>
 @endsection
